@@ -62,6 +62,7 @@ public class UserInterface {
                     break;
                 case "10":
                     processCreateContract();
+                    break;
                 case "99":
                     quit = true;
                     break;
@@ -198,6 +199,7 @@ public class UserInterface {
     }
     private void processCreateContract() {
         List<Vehicle> vehicles = dealership.getAllVehicles();
+
         System.out.println("Create contract: ");
         System.out.println("Enter contract Type: ");
         String type = scanner.nextLine();
@@ -221,6 +223,9 @@ public class UserInterface {
             if (v.getVin() == vin){
                 vehicle = v;
                 break;
+            }
+            else {
+                System.out.println("Invalid VIN!");
             }
         }
 
